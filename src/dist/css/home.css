@@ -29,6 +29,7 @@ body {
   cursor: move !important; }
 
 .board-column-header {
+  z-index: 100000;
   position: relative;
   height: 8vw;
   display: flex;

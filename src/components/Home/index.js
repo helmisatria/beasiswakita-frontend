@@ -4,6 +4,9 @@ import Muuri from 'muuri';
 
 import '../../dist/css/home.css';
 
+// Components
+import Header from './Header';
+
 export default class Home extends Component {
   state = {
 
@@ -30,23 +33,12 @@ export default class Home extends Component {
         dragContainer: document.body,
         dragReleaseDuration: 400,
         dragReleaseEasing: 'ease',
-        dragStartPredicate(item, event) {
-          // Prevent first item from being dragged.
-          console.log(item);
-
-          if (item._element.classList[1] === 'lalala') {
-            return false;
-          }
-          // For other items use the default drag start predicate.
-          return Muuri.ItemDrag.defaultStartPredicate(item, event);
-        },
       })
         .on('dragStart', (item) => {
           // Let's set fixed widht/height to the dragged item
           // so that it does not stretch unwillingly when
           // it's appended to the document body for the
           // duration of the drag.
-          console.log(item);
           item.getElement().style.width = `${item.getWidth()}px`;
           item.getElement().style.height = `${item.getHeight()}px`;
         })
@@ -75,7 +67,6 @@ export default class Home extends Component {
       columnGrids.push(grid);
     });
 
-
     // Instantiate the board grid so we can drag those
     // columns around.
     boardGrid = new Muuri('.board', {
@@ -86,7 +77,6 @@ export default class Home extends Component {
       dragStartPredicate: {
         handle: '.board-column-header',
       },
-      layoutOnResize: true,
       dragReleaseDuration: 400,
       dragReleaseEasing: 'ease',
       layout: {
@@ -97,45 +87,82 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className="board">
-        <div className="board-column todo">
-          <div className="board-column-header">To do</div>
-          <div className="board-column-content">
-            <div className="board-item lalala"><div className="board-item-content"><span>Item #</span>1</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>2</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>3</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>4</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>5</div></div>
+      <div>
+        <div className="board">
+          <div className="board-column todo">
+            <div className="board-column-header">
+              <Header
+                title="Wishlist"
+                subtitle="Beasiswa wishlist kamu"
+              />
+            </div>
+            <div className="board-column-content">
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>1</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>2</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>3</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>4</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>5</div></div>
+            </div>
           </div>
-        </div>
-        <div className="board-column working">
-          <div className="board-column-header">Working</div>
-          <div className="board-column-content">
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>6</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>7</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>8</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>9</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>10</div></div>
+          <div className="board-column todo">
+            <div className="board-column-header">
+              <Header
+                title="Applied"
+                subtitle="Beasiswa yang di apply"
+              />
+            </div>
+            <div className="board-column-content">
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>1</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>2</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>3</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>4</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>5</div></div>
+            </div>
           </div>
-        </div>
-        <div className="board-column done">
-          <div className="board-column-header">Done</div>
-          <div className="board-column-content">
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>hehe</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>12</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>13</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>14</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>15</div></div>
+          <div className="board-column todo">
+            <div className="board-column-header">
+              <Header
+                title="In Progress"
+                subtitle="Beasiswa yang di apply"
+              />
+            </div>
+            <div className="board-column-content">
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>1</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>2</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>3</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>4</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>5</div></div>
+            </div>
           </div>
-        </div>
-        <div className="board-column done">
-          <div className="board-column-header">Done</div>
-          <div className="board-column-content">
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>11</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>12</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>13</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>14</div></div>
-            <div className="board-item"><div className="board-item-content"><span>Item #</span>15</div></div>
+          <div className="board-column working">
+            <div className="board-column-header">
+              <Header
+                title="Rejected"
+                subtitle="Beasiswa yang di apply"
+              />
+            </div>
+            <div className="board-column-content">
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>6</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>7</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>8</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>9</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>10</div></div>
+            </div>
+          </div>
+          <div className="board-column done">
+            <div className="board-column-header">
+              <Header
+                title="Accepted"
+                subtitle="Beasiswa yang di apply"
+              />
+            </div>
+            <div className="board-column-content">
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>11</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>12</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>13</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>14</div></div>
+              <div className="board-item"><div className="board-item-content"><span>Item #</span>15</div></div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,16 +1,21 @@
+body {
+  overflow-x: visible;
+}
+
 .board {
   position: relative;
-  margin-left: 1%;
 }
 .board-column {
   position: absolute;
   left: 0;
   right: 0;
-  width: 25vw;
-  margin: 0 0.5%;
+  width: 22vw;
   background: #f0f0f0;
   border-radius: 3px;
   z-index: 1;
+}
+.board-column:not(:last-child) {
+  margin-right: 0.8vw;
 }
 .board-column.muuri-item-releasing {
   z-index: 2;
@@ -21,16 +26,15 @@
 }
 .board-column-header {
   position: relative;
-  height: 50px;
-  line-height: 50px;
+  height: 8vw;
+  display: flex;
   overflow: hidden;
-  padding: 0 20px;
-  text-align: center;
+  padding: 0 1.2vw;
   background: #333;
   color: #fff;
   border-radius: 3px 3px 0 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .board-column-header {
     text-indent: -1000px;
   }

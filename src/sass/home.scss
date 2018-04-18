@@ -13,16 +13,26 @@ body {
   background: #f0f0f0;
   border-radius: 3px;
   z-index: 1;
+  border-right: 1px solid #d4d7d9;
 }
+@media (max-width: 700px) {
+  .board-column {
+    width: 300px !important;
+  }
+  .board-column-header {
+    height: 15vw !important;
+  }
+}
+
 .board-column:not(:last-child) {
-  margin-right: 0.8vw;
+  // margin-right: 0.4vw;
 }
 .board-column.muuri-item-releasing {
   z-index: 2;
 }
 .board-column.muuri-item-dragging {
   z-index: 3;
-  cursor: move;
+  cursor: move !important;
 }
 .board-column-header {
   position: relative;
@@ -30,14 +40,10 @@ body {
   display: flex;
   overflow: hidden;
   padding: 0 1.2vw;
-  background: #333;
+  background: #f1f3f5;
   color: #fff;
   border-radius: 3px 3px 0 0;
-}
-@media (max-width: 700px) {
-  .board-column-header {
-    text-indent: -1000px;
-  }
+  border-bottom: 1px solid #d4d7d9;
 }
 .board-column.todo .board-column-header {
   background: #4a9ff9;
@@ -52,6 +58,7 @@ body {
   position: relative;
   border: 10px solid transparent;
   min-height: 95px;
+  background-color: #f1f3f5 !important;
 }
 .board-item {
   position: absolute;
@@ -59,18 +66,18 @@ body {
   margin: 5px 0;
 }
 .board-item.muuri-item-releasing {
-  z-index: 9998;
+  z-index: 101;
 }
 .board-item.muuri-item-dragging {
-  z-index: 9999;
-  cursor: move;
+  z-index: 102;
+  cursor: move !important;
 }
 .board-item.muuri-item-hidden {
   z-index: 0;
 }
 .board-item-content {
   position: relative;
-  padding: 20px;
+  padding: 15px;
   background: #fff;
   border-radius: 4px;
   font-size: 17px;
@@ -80,9 +87,13 @@ body {
 }
 @media (max-width: 600px) {
   .board-item-content {
-    text-align: center;
+    // text-align: center;
   }
   .board-item-content span {
-    display: none;
+    // display: none;
   }
+}
+
+.item-disabled > .board-item-content {
+  cursor: not-allowed !important;
 }

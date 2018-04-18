@@ -5,7 +5,15 @@ import Muuri from 'muuri';
 import '../../dist/css/home.css';
 
 // Components
-import Header from './Header';
+import HeaderItem from './HeaderItem';
+import Item from './Item';
+
+// Icons
+import LoveIcon from '../../dist/assets/love';
+import PocketIcon from '../../dist/assets/pocket';
+import ClockIcon from '../../dist/assets/clock';
+import XCircleIcon from '../../dist/assets/x-circle';
+import CheckCircleIcon from '../../dist/assets/check-circle';
 
 export default class Home extends Component {
   state = {
@@ -33,6 +41,22 @@ export default class Home extends Component {
         dragContainer: document.body,
         dragReleaseDuration: 400,
         dragReleaseEasing: 'ease',
+        // dragStartPredicate: {
+        //   distance: 10,
+        //   delay: 100,
+        // },
+        dragStartPredicate(item, event) {
+          // Prevent first item from being dragged.
+          // console.log(item);
+
+          if (item._element.classList[1] === 'item-disabled') {
+            return false;
+          } else if (event.deltaTime > 100) {
+            return true;
+          }
+          // For other items use the default drag start predicate.
+          // return Muuri.ItemDrag.defaultStartPredicate(item, event);
+        },
       })
         .on('dragStart', (item) => {
           // Let's set fixed widht/height to the dragged item
@@ -89,79 +113,90 @@ export default class Home extends Component {
     return (
       <div>
         <div className="board">
-          <div className="board-column todo">
+          <div className="board-column">
             <div className="board-column-header">
-              <Header
+              <HeaderItem
+                Icon={<LoveIcon />}
                 title="Wishlist"
                 subtitle="Beasiswa wishlist kamu"
               />
             </div>
             <div className="board-column-content">
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>1</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>2</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>3</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>4</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>5</div></div>
+              <div className="board-item">
+                <div className="board-item-content">
+                  <Item />
+                </div>
+              </div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item item-disabled">
+                <div className="board-item-content">
+                  <Item />
+                </div>
+              </div>
             </div>
           </div>
-          <div className="board-column todo">
+          <div className="board-column">
             <div className="board-column-header">
-              <Header
+              <HeaderItem
+                Icon={<PocketIcon />}
                 title="Applied"
                 subtitle="Beasiswa yang di apply"
               />
             </div>
             <div className="board-column-content">
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>1</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>2</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>3</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>4</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>5</div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
             </div>
           </div>
-          <div className="board-column todo">
+          <div className="board-column">
             <div className="board-column-header">
-              <Header
+              <HeaderItem
+                Icon={<ClockIcon />}
                 title="In Progress"
                 subtitle="Beasiswa yang di apply"
               />
             </div>
             <div className="board-column-content">
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>1</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>2</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>3</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>4</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>5</div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
             </div>
           </div>
-          <div className="board-column working">
+          <div className="board-column">
             <div className="board-column-header">
-              <Header
+              <HeaderItem
+                Icon={<XCircleIcon />}
                 title="Rejected"
                 subtitle="Beasiswa yang di apply"
               />
             </div>
             <div className="board-column-content">
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>6</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>7</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>8</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>9</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>10</div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
             </div>
           </div>
-          <div className="board-column done">
+          <div className="board-column">
             <div className="board-column-header">
-              <Header
+              <HeaderItem
+                Icon={<CheckCircleIcon />}
                 title="Accepted"
                 subtitle="Beasiswa yang di apply"
               />
             </div>
             <div className="board-column-content">
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>11</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>12</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>13</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>14</div></div>
-              <div className="board-item"><div className="board-item-content"><span>Item #</span>15</div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item /></div></div>
             </div>
           </div>
         </div>

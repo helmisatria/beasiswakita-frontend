@@ -2,7 +2,8 @@ body {
   overflow-x: visible; }
 
 .board {
-  position: relative; }
+  position: relative;
+  top: 52px; }
 
 .board-column {
   position: absolute;

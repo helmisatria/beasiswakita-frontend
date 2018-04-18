@@ -1,7 +1,7 @@
 import React from 'react';
 import { Popup, Icon } from 'semantic-ui-react';
 
-import '../../dist/css/board_header.css';
+import '../../dist/css/board_headerItem.css';
 
 // Buttons
 import Plus from '../../dist/assets/plus';

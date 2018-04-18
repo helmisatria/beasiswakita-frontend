@@ -7,6 +7,7 @@ import '../../dist/css/home.css';
 // Components
 import HeaderItem from './HeaderItem';
 import Item from './Item';
+import Header from './Header';
 
 // Icons
 import LoveIcon from '../../dist/assets/love';
@@ -112,6 +113,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
+        <Header />
         <div className="board">
           <div className="board-column">
             <div className="board-column-header">

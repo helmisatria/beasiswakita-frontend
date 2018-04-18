@@ -40,9 +40,9 @@
   text-align: left;
   color: #ffffff; }
 
-#sidebarContainer {
+.sidebarContainer {
   border-radius: 8px;
-  background-image: linear-gradient(to top, #4ab6ff, #1ba3ff);
+  background-color: #1ba3ff;
   padding: 7px;
   display: flex;
   align-items: center; }
@@ -53,11 +53,17 @@
   margin-left: 8px;
   margin-right: 25px; }
 
-#sidebarContainer-disabled {
+@media (max-width: 500px) {
+  #header_contentContainer {
+    display: none; }
+  .sidebarContainer {
+    margin-right: 15px; } }
+
+.sidebarContainer.disabled {
   display: flex;
   padding: 8px;
   display: flex;
   align-items: center;
   opacity: 0.8;
   border-radius: 8px;
-  background-color: #5a769d; }
+  background-color: #5a769d !important; }

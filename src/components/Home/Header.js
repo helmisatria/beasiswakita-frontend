@@ -19,21 +19,21 @@ export default class Header extends Component {
     return (
       <div id="headerContainer">
         <img src={Logo} id="headerLogo" />
-        <div id="sidebarContainer">
+        <div className="sidebarContainer">
           <SideBarIcon />
         </div>
         <div id="header_contentContainer">
           <span className="header_contentTitle">Board</span>
           <span className="header_contentSubTitle">Papan status</span>
         </div>
-        <div id="sidebarContainer-disabled">
+        <div className="sidebarContainer disabled">
           <MailIcon />
         </div>
         <div id="header_contentContainer">
           <span className="header_contentTitle">Message</span>
           <span className="header_contentSubTitle">Semua Pesan</span>
         </div>
-        <div id="sidebarContainer-disabled">
+        <div className="sidebarContainer disabled">
           <SearchIcon />
         </div>
         <div id="header_contentContainer">

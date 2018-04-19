@@ -42,3 +42,16 @@
   align-items: flex-end;
   margin-top: 5px;
 }
+
+.board_itemRightBottom {
+  display: flex;
+  align-items: center;
+}
+
+#upRightIcon {
+  border-radius: 5px;
+  border: solid 1px #ececec;
+  padding: 9px;
+  display: flex;
+  margin-right: 8px;
+}

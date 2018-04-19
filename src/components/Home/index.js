@@ -18,7 +18,8 @@ import CheckCircleIcon from '../../dist/assets/check-circle';
 
 export default class Home extends Component {
   state = {
-
+    itemSelected: undefined,
+    deleteItem: undefined,
   }
 
   componentDidMount() {
@@ -52,7 +53,7 @@ export default class Home extends Component {
 
           if (item._element.classList[1] === 'item-disabled') {
             return false;
-          } else if (event.deltaTime > 100) {
+          } else if (event.deltaTime > 165) {
             return true;
           }
           // For other items use the default drag start predicate.
@@ -87,6 +88,19 @@ export default class Home extends Component {
           boardGrid.refreshItems().layout();
         });
 
+      grid.getItems().forEach((item) => {
+        item.getElement().addEventListener('click', (event) => {
+          this.setState({ itemSelected: item });
+
+          console.log({ delete: this.state.deleteItem });
+
+
+          console.log('====================================');
+          console.log({ item, event });
+          console.log('====================================');
+        });
+      });
+
       // Add the column grid reference to the column grids
       // array, so we can access it later on.
       columnGrids.push(grid);
@@ -110,7 +124,13 @@ export default class Home extends Component {
     });
   }
 
+  handleDeleteItem = (item) => {
+    console.log('handleDelete', item.getGrid().remove(item, { removeElements: true }));
+  }
+
   render() {
+    const { itemSelected } = this.state;
+
     return (
       <div>
         <Header />
@@ -124,16 +144,9 @@ export default class Home extends Component {
               />
             </div>
             <div className="board-column-content">
-              <div className="board-item">
-                <div className="board-item-content">
-                  <Item />
-                </div>
-              </div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item item-disabled">
-                <div className="board-item-content">
-                  <Item />
-                </div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item item-disabled"><div className="board-item-content"><Item isDisabled itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div>
               </div>
             </div>
           </div>
@@ -146,11 +159,11 @@ export default class Home extends Component {
               />
             </div>
             <div className="board-column-content">
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item isDisabled itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
             </div>
           </div>
           <div className="board-column">
@@ -162,11 +175,11 @@ export default class Home extends Component {
               />
             </div>
             <div className="board-column-content">
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item isDisabled itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item isDisabled itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
             </div>
           </div>
           <div className="board-column">
@@ -178,11 +191,11 @@ export default class Home extends Component {
               />
             </div>
             <div className="board-column-content">
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item isDisabled itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item isDisabled itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
             </div>
           </div>
           <div className="board-column">
@@ -194,11 +207,11 @@ export default class Home extends Component {
               />
             </div>
             <div className="board-column-content">
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
-              <div className="board-item"><div className="board-item-content"><Item /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
+              <div className="board-item"><div className="board-item-content"><Item itemSelected={itemSelected} handleDelete={this.handleDeleteItem} /></div></div>
             </div>
           </div>
         </div>

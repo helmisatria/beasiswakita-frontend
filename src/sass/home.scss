@@ -96,6 +96,6 @@ body {
   }
 }
 
-.item-disabled > .board-item-content {
+.board-item > .board-item-content > .item-disabled {
   cursor: not-allowed !important;
 }

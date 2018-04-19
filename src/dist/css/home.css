@@ -80,5 +80,5 @@ body {
   -webkit-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2); }
 
-.item-disabled > .board-item-content {
+.board-item > .board-item-content > .item-disabled {
   cursor: not-allowed !important; }

@@ -73,6 +73,11 @@
   justify-content: space-between;
   padding: 25px 8vw; }
 
+#search_contentBottomSubtitle {
+  display: flex;
+  align-items: center;
+  margin-top: 8px; }
+
 #search_footerBtmLeft {
   display: flex;
   align-items: center; }
@@ -92,6 +97,7 @@
 .search_footerBtmItem {
   padding-right: 2vw;
   font-family: Roboto;
+  opacity: 0.5;
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
@@ -99,4 +105,7 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #777777; }
+  color: #323233; }
+
+#search_contentBottomDate {
+  margin-left: 8px; }

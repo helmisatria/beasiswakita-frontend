@@ -1,6 +1,29 @@
 body {
   font-family: Roboto !important; }
 
+#search_headerContainer {
+  display: flex;
+  align-items: center; }
+
+#search_header {
+  padding: 25px 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+#search_headerPostingBtn {
+  border-radius: 5px;
+  background-color: #16c172;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff; }
+
 .search_titleTop {
   font-family: Roboto !important;
   font-size: 24px;
@@ -22,6 +45,21 @@ body {
   min-height: 280px;
   width: 100vw;
   background-color: #ededed !important; }
+
+.search_headerCornerText {
+  opacity: 0.8;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff; }
+
+.search_headerCornerText:first-child {
+  padding-right: 40px; }
 
 #search_topDropdown {
   border-top-right-radius: 5px !important;

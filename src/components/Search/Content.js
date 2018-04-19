@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, Icon, Grid } from 'semantic-ui-react';
+import { Card, Grid } from 'semantic-ui-react';
 
 import '../../dist/css/search_content.css';
+
+import TimeIcon from '../../dist/assets/time';
 
 const data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
@@ -18,7 +20,8 @@ export default () => (
             </Card.Content>
             <Card.Content extra>
               <span id="search_contentBottomTitle">Pendaftaran Telah Dibuka</span>
-              <div>
+              <div id="search_contentBottomSubtitle">
+                <TimeIcon />
                 <span id="search_contentBottomDate">23 Juli 2018 - 26 Agustus 2018</span>
               </div>
             </Card.Content>

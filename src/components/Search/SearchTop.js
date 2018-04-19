@@ -15,7 +15,7 @@ export default () => (
           <i className="search icon" />
 
           <input type="text" placeholder="Search..." />
-          <Select compact placeholder="Semua Beasiswa" options={options} />
+          <Select compact placeholder="Semua Beasiswa" defaultValue="page" options={options} />
         </div>
       </div>
     </Grid.Column>

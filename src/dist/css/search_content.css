@@ -1,0 +1,72 @@
+body {
+  overflow-x: hidden; }
+
+#search_countContentFound {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5c5c5c; }
+
+#search_contentContainer {
+  width: 100vw;
+  padding: 0 8vw;
+  margin-top: 40px; }
+
+@media (max-width: 767px) {
+  #search_contentContainer {
+    padding: 0;
+    text-align: center; } }
+
+#search_allContents {
+  margin-top: 26px; }
+
+.Circle {
+  margin: 0;
+  padding: 0.8em;
+  border-radius: 10em;
+  background-color: #ededed;
+  width: 40px;
+  height: 40px; }
+
+#search_contentItemTitle {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000; }
+
+.search_contentInsideContainer {
+  display: flex;
+  flex-direction: column; }
+
+#search_contentBottomTitle {
+  opacity: 0.5;
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000; }
+
+#search_contentBottomDate {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000; }

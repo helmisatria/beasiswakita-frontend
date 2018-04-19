@@ -8,7 +8,7 @@ const options = [
 ];
 
 export default () => (
-  <Grid stackable columns={2}>
+  <Grid stackable columns={2} id="search_gridInputTop">
     <Grid.Column computer={14} id="search_inputTop">
       <div>
         <div className="ui right action left icon large input fluid">

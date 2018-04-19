@@ -28,7 +28,8 @@ body {
 #search_topContainer {
   width: 100vw !important;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 0 20vw; }
 
 .search_cariBtn {
   height: 100%;
@@ -47,14 +48,25 @@ body {
 #search_inputTop {
   padding-right: 0 !important; }
 
-@media (max-width: 720px) {
+@media (max-width: 1050px) {
   #search_topContainer {
-    margin: 0 !important; } }
+    padding: 5vw; } }
 
 @media (max-width: 767px) {
   .search_cariBtn {
     padding: 10px 0 !important; }
   #search_cariBtnContainer {
-    padding-top: 0 !important; }
+    padding-top: 0 !important;
+    padding-right: 0 !important; }
   .search_titleTop {
-    text-align: center; } }
+    text-align: center; }
+  #search_topContainer {
+    padding: 0; }
+  .search_titleTop {
+    margin-top: 20px !important; }
+  #search_gridInputTop {
+    padding-right: 14px; } }
+
+@media (max-width: 720px) {
+  #search_topContainer {
+    margin: 0 !important; } }

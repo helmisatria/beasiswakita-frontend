@@ -1,0 +1,110 @@
+$paddingContent: 25px 8vw;
+
+#search_footerContainer {
+  background-color: #d8d8d8;
+}
+
+#search_footerContent {
+  padding: $paddingContent;
+  margin-top: 50px;
+  padding-right: 55vw;
+}
+
+#search_footerTopTitle {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+#search_footerTopSubtitle {
+  opacity: 0.5;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.search_footerPoin {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  padding-bottom: 20px !important;
+}
+
+#search_footerBtnDaftar {
+  border-radius: 5px;
+  background-color: #8f8f8f !important;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500 !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.search_footerPoinContainer {
+  margin-bottom: 10px;
+}
+
+#search_footerContainerPoints {
+  margin-bottom: 40px;
+}
+
+#search_footerContentBottom {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $paddingContent;
+}
+
+#search_footerBtmLeft {
+  display: flex;
+  align-items: center;
+}
+
+#search_footerCredit {
+  opacity: 0.5;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.search_footerBtmItem {
+  padding-right: 2vw;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #777777;
+}

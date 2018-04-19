@@ -23,6 +23,8 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
+    document.body.style.overflowX = 'scroll';
+
     const itemContainers = [].slice.call(document.querySelectorAll('.board-column-content'));
     const columnGrids = [];
     let boardGrid;

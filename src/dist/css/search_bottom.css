@@ -14,12 +14,22 @@
   border-radius: 5px;
   background-color: #e2e2e2;
   padding: 10px !important;
-  margin-top: 20px; }
+  margin-top: 20px;
+  cursor: pointer; }
 
 @media (max-width: 767px) {
   #search_bottomTitleTextContainer {
     text-align: center;
-    margin: 10px auto; } }
+    margin: 10px auto; }
+  #search_filterText {
+    padding: 10px !important; }
+  #search_filterTextContainer {
+    padding-top: 0 !important; }
+  #search_bottomFilterContainer {
+    padding-right: 14px; } }
+
+#search_filterTextContainer {
+  padding-left: 5px; }
 
 #search_filterText {
   font-family: Roboto !important;
@@ -33,7 +43,8 @@
   border-radius: 5px;
   background-color: #bfbfbf !important;
   text-align: center;
-  height: 100%; }
+  height: 100%;
+  padding: 10px 0; }
 
 #search_bottomSelectionContainer {
   margin-top: 5px; }

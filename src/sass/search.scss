@@ -17,6 +17,22 @@ body {
   justify-content: space-between;
 }
 
+#search_headerContentContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  margin-right: 25px;
+}
+
+@media (max-width: 1075px) {
+  #search_headerContentContainer {
+    display: none;
+  }
+  .sidebarContainer {
+    margin-right: 15px;
+  }
+}
+
 #search_headerPostingBtn {
   border-radius: 5px;
   background-color: #16c172;

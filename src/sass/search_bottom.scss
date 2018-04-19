@@ -19,6 +19,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  padding-bottom: 30px !important;
 }
 
 @media (max-width: 767px) {
@@ -59,6 +60,6 @@
 }
 
 #search_bottomSelectionContainer {
-  margin-top: 5px;
+  margin-top: -20px;
   margin-bottom: 10px;
 }

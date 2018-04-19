@@ -17,7 +17,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer; }
+  cursor: pointer;
+  padding-bottom: 30px !important; }
 
 @media (max-width: 767px) {
   #search_bottomTitleTextContainer {
@@ -50,5 +51,5 @@
   padding: 0; }
 
 #search_bottomSelectionContainer {
-  margin-top: 5px;
+  margin-top: -20px;
   margin-bottom: 10px; }

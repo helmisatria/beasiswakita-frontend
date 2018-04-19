@@ -1,0 +1,71 @@
+$font: Roboto !important;
+
+body {
+  font-family: $font;
+}
+
+.search_titleTop {
+  font-family: $font;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5c5c5c;
+  margin-top: 63px !important;
+}
+
+.search_topContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+  width: 100vw;
+  background-color: #ededed !important;
+}
+
+#search_topDropdown {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  background-color: #ffffff !important;
+}
+
+#search_topContainer {
+  width: 100vw !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.search_cariBtn {
+  height: 100%;
+  padding: 0 !important;
+  border-radius: 5px !important;
+  background-color: #8f8f8f !important;
+  font-family: Roboto !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  text-align: center !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 720px) {
+  #search_topContainer {
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .search_cariBtn {
+    padding: 10px 0 !important;
+  }
+  #search_cariBtnContainer {
+    padding-top: 0 !important;
+  }
+  .search_titleTop {
+    text-align: center;
+  }
+}

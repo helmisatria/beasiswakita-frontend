@@ -13,6 +13,7 @@ import {
 // import DetilPesanan from '../components/DetilPesanan';
 // import ProsesPesanan from '../components/ProsesPesanan';
 import Home from '../components/Home';
+import Search from '../components/Search';
 // import Login from '../components/Login';
 
 const AppRouter = () => (
@@ -20,6 +21,7 @@ const AppRouter = () => (
     <div>
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/search" exact component={Search} />
         {/* <PrivateRoute path="/" exact component={Home} />
         <PrivateRoute path="/pesanan" exact component={ListPesanan} />
         <PrivateRoute path="/pesanan/:id" exact component={DetilPesanan} />

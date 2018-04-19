@@ -8,6 +8,7 @@ import '../../dist/css/home.css';
 import HeaderItem from './HeaderItem';
 import Item from './Item';
 import Header from './Header';
+import Modal from './Modal';
 
 // Icons
 import LoveIcon from '../../dist/assets/love';
@@ -20,6 +21,7 @@ export default class Home extends Component {
   state = {
     itemSelected: undefined,
     deleteItem: undefined,
+    openModal: false,
   }
 
   componentDidMount() {
@@ -45,10 +47,6 @@ export default class Home extends Component {
         dragContainer: document.body,
         dragReleaseDuration: 400,
         dragReleaseEasing: 'ease',
-        // dragStartPredicate: {
-        //   distance: 10,
-        //   delay: 100,
-        // },
         dragStartPredicate(item, event) {
           // Prevent first item from being dragged.
           // console.log(item);
@@ -130,11 +128,22 @@ export default class Home extends Component {
     console.log('handleDelete', item.getGrid().remove(item, { removeElements: true }));
   }
 
+  handleClickAddBeasiswa = () => {
+    console.log('hi!');
+    this.setState({ openModal: true });
+  }
+
+  handleCloseModalAddBeasiswa = () => {
+    this.setState({ openModal: false });
+  }
+
+
   render() {
     const { itemSelected } = this.state;
 
     return (
       <div>
+        <Modal open={this.state.openModal} closeModal={this.handleCloseModalAddBeasiswa} />
         <Header />
         <div className="board">
           <div className="board-column">
@@ -143,6 +152,7 @@ export default class Home extends Component {
                 Icon={<LoveIcon />}
                 title="Wishlist"
                 subtitle="Beasiswa wishlist kamu"
+                clickAddBeasiswa={this.handleClickAddBeasiswa}
               />
             </div>
             <div className="board-column-content">
@@ -158,6 +168,7 @@ export default class Home extends Component {
                 Icon={<PocketIcon />}
                 title="Applied"
                 subtitle="Beasiswa yang di apply"
+                clickAddBeasiswa={this.handleClickAddBeasiswa}
               />
             </div>
             <div className="board-column-content">
@@ -173,6 +184,7 @@ export default class Home extends Component {
                 Icon={<ClockIcon />}
                 title="In Progress"
                 subtitle="Beasiswa yang di apply"
+                clickAddBeasiswa={this.handleClickAddBeasiswa}
               />
             </div>
             <div className="board-column-content">
@@ -186,6 +198,7 @@ export default class Home extends Component {
                 Icon={<XCircleIcon />}
                 title="Rejected"
                 subtitle="Beasiswa yang di apply"
+                clickAddBeasiswa={this.handleClickAddBeasiswa}
               />
             </div>
             <div className="board-column-content">
@@ -200,6 +213,7 @@ export default class Home extends Component {
                 Icon={<CheckCircleIcon />}
                 title="Accepted"
                 subtitle="Beasiswa yang di apply"
+                clickAddBeasiswa={this.handleClickAddBeasiswa}
               />
             </div>
             <div className="board-column-content">

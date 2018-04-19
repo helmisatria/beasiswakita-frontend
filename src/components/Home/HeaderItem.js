@@ -6,7 +6,9 @@ import '../../dist/css/board_headerItem.css';
 // Buttons
 import Plus from '../../dist/assets/plus';
 
-export default ({ Icon, title, subtitle }) => (
+export default ({
+  Icon, title, subtitle, clickAddBeasiswa,
+}) => (
   <div id="boardContainer">
     <div id="boardMiniContainer">
       {Icon}
@@ -16,7 +18,11 @@ export default ({ Icon, title, subtitle }) => (
       </div>
     </div>
     <Popup
-      trigger={<div id="Oval"><Plus /></div>}
+      trigger={
+        <div id="Oval" onClick={() => clickAddBeasiswa()}>
+          <Plus />
+        </div>
+      }
       content="Track Beasiswa"
       position="bottom center"
     />

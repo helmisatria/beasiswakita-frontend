@@ -7,14 +7,16 @@
   line-height: normal;
   letter-spacing: 0.5px;
   text-align: left;
-  color: #5c5c5c; }
+  color: white;
+  margin: 0; }
 
 #search_bottomTitleTextContainer {
-  width: 200px;
-  border-radius: 5px;
-  background-color: #e2e2e2;
+  width: 130px;
   padding: 10px !important;
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer; }
 
 @media (max-width: 767px) {
@@ -29,7 +31,8 @@
     padding-right: 14px; } }
 
 #search_filterTextContainer {
-  padding-left: 5px; }
+  padding-left: 5px;
+  padding-top: 0 !important; }
 
 #search_filterText {
   font-family: Roboto !important;
@@ -44,7 +47,8 @@
   background-color: #bfbfbf !important;
   text-align: center;
   height: 100%;
-  padding: 10px 0; }
+  padding: 0; }
 
 #search_bottomSelectionContainer {
-  margin-top: 5px; }
+  margin-top: 5px;
+  margin-bottom: 10px; }

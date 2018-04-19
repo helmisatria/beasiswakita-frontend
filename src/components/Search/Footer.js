@@ -3,6 +3,10 @@ import { Button } from 'semantic-ui-react';
 
 import '../../dist/css/search_footer.css';
 
+// Icons
+import CheckCircleMini from '../../dist/assets/check-circle-mini';
+import Logo from '../../dist/assets/logoBlue.png';
+
 export default () => (
   <div id="search_footerContainer">
     <div id="search_footerContent">
@@ -14,15 +18,27 @@ export default () => (
       </p>
       <div id="search_footerContainerPoints">
         <div className="search_footerPoinContainer">
+          <div style={{ flexShrink: 0 }}>
+            <CheckCircleMini />
+          </div>
           <span className="search_footerPoin">Manajemen pendaftaran beasiswa lebih mudah</span>
         </div>
         <div className="search_footerPoinContainer">
+          <div style={{ flexShrink: 0 }}>
+            <CheckCircleMini />
+          </div>
           <span className="search_footerPoin">Seamless notification untuk kamu yang menggunakan easy apply!</span>
         </div>
         <div className="search_footerPoinContainer">
+          <div style={{ flexShrink: 0 }}>
+            <CheckCircleMini />
+          </div>
           <span className="search_footerPoin">Catat semua proses pencarian beasiswamu</span>
         </div>
         <div className="search_footerPoinContainer">
+          <div style={{ visibility: 'hidden' }}>
+            <CheckCircleMini />
+          </div>
           <span className="search_footerPoin">dan banyak lagi!</span>
         </div>
       </div>
@@ -30,7 +46,7 @@ export default () => (
     </div>
     <div id="search_footerContentBottom">
       <div id="search_footerBtmLeft">
-        <div className="Circle" style={{ marginRight: '21px' }} />
+        <img src={Logo} style={{ height: '34px', marginRight: '22px' }} />
         <span id="search_footerCredit">© 2018 Beasiswakita. All Rights Reserved</span>
       </div>
       <div>

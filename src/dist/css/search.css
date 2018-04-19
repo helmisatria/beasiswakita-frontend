@@ -9,14 +9,17 @@ body {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: left;
-  color: #5c5c5c;
+  text-align: center;
+  color: white;
   margin-top: 63px !important; }
 
 .search_topContainer {
+  background-image: url("../../dist/assets/searchBG.jpg");
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  min-height: 340px;
+  min-height: 280px;
   width: 100vw;
   background-color: #ededed !important; }
 
@@ -31,18 +34,22 @@ body {
   flex-direction: column;
   padding: 0 20vw; }
 
+#search_gridInputTop {
+  display: flex;
+  align-items: center; }
+
 .search_cariBtn {
-  height: 100%;
-  padding: 0 !important;
-  border-radius: 5px !important;
-  background-color: #8f8f8f !important;
+  height: 100% !important;
+  padding: 14px !important;
+  object-fit: contain;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #4ab6ff, #1ba3ff) !important;
   font-family: Roboto !important;
   font-weight: 500 !important;
   font-style: normal !important;
   font-stretch: normal !important;
   line-height: normal !important;
   letter-spacing: normal !important;
-  text-align: center !important;
   color: #ffffff !important; }
 
 #search_inputTop {

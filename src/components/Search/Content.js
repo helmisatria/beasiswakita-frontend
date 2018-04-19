@@ -7,8 +7,6 @@ const data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 export default () => (
   <div id="search_contentContainer">
-    <span id="search_countContentFound">302 Beasiswa ditemukan</span>
-
     <Grid stackable doubling columns={4} id="search_allContents">
       {data.map(() => (
         <Grid.Column className="search_colContent">

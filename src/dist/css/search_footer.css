@@ -2,6 +2,9 @@
   background-color: #d8d8d8; }
 
 #search_footerContent {
+  background-image: url("../../dist/assets/searchFooter.jpg");
+  background-position: center;
+  background-size: cover;
   padding: 25px 8vw;
   margin-top: 50px;
   padding-right: 55vw; }
@@ -15,10 +18,10 @@
   line-height: 1.33;
   letter-spacing: normal;
   text-align: left;
-  color: #000000; }
+  color: #ffff; }
 
 #search_footerTopSubtitle {
-  opacity: 0.5;
+  opacity: 0.8;
   font-family: Roboto;
   font-size: 16px;
   font-weight: normal;
@@ -27,7 +30,7 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #000000; }
+  color: #ffffff; }
 
 .search_footerPoin {
   font-family: Roboto;
@@ -38,12 +41,12 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #000000;
-  padding-bottom: 20px !important; }
+  color: #ffffff;
+  margin-left: 12px; }
 
 #search_footerBtnDaftar {
   border-radius: 5px;
-  background-color: #8f8f8f !important;
+  background-color: #16c172 !important;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500 !important;
@@ -55,9 +58,12 @@
   color: #ffffff; }
 
 .search_footerPoinContainer {
-  margin-bottom: 10px; }
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px; }
 
 #search_footerContainerPoints {
+  margin-top: 20px;
   margin-bottom: 40px; }
 
 #search_footerContentBottom {

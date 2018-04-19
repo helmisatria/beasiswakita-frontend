@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Dropdown, Grid, Button } from 'semantic-ui-react';
+import { Dropdown, Grid, Button, Icon } from 'semantic-ui-react';
 
 import '../../dist/css/search_bottom.css';
 
+import ArrowDown from '../../dist/assets/arrow-down';
 
 export default class SearchBottom extends Component {
   state = {
@@ -23,20 +24,30 @@ export default class SearchBottom extends Component {
     ];
     return (
       <div id="search_bottomContainer">
-        <Button id="search_bottomTitleTextContainer" onClick={() => this.handleToggleFilter()}>
-          <h4 id="search_bottomTitleText">TERAPKAN ADVANCE FILTER</h4>
-        </Button>
+        <div id="search_bottomTitleTextContainer" onClick={() => this.handleToggleFilter()}>
+          <h4 id="search_bottomTitleText">Filter Lanjutan</h4>
+          <ArrowDown />
+        </div>
         {this.state.isFilterVisible && (
           <Grid stackable columns={2} id="search_bottomSelectionContainer">
             <Grid.Column computer={14}>
               <Grid columns="equal" id="search_bottomFilterContainer">
-                <Grid.Column style={{ paddingLeft: '14px', paddingRight: 0, margin: 0 }}>
+                <Grid.Column style={{
+                    paddingLeft: '14px', paddingRight: 0, margin: 0, paddingTop: 0,
+                  }}
+                >
                   <Dropdown compact fluid placeholder="Jenjang Pendidikan" defaultValue={1} selection options={options} />
                 </Grid.Column>
-                <Grid.Column style={{ paddingLeft: 0, paddingRight: 0, margin: 0 }}>
+                <Grid.Column style={{
+                    paddingLeft: 0, paddingRight: 0, margin: 0, paddingTop: 0,
+                  }}
+                >
                   <Dropdown compact fluid placeholder="Pilih Wilayah" defaultValue={2} selection options={options} />
                 </Grid.Column>
-                <Grid.Column style={{ paddingLeft: 0, paddingRight: 0, margin: 0 }}>
+                <Grid.Column style={{
+                    paddingLeft: 0, paddingRight: 0, margin: 0, paddingTop: 0,
+                  }}
+                >
                   <Dropdown compact fluid placeholder="Pilih Negara" defaultValue={3} selection options={options} />
                 </Grid.Column>
               </Grid>

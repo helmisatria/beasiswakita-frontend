@@ -9,7 +9,7 @@ const options = [
 
 export default () => (
   <Grid stackable columns={2} id="search_gridInputTop">
-    <Grid.Column computer={14} id="search_inputTop">
+    <Grid.Column computer={13} id="search_inputTop">
       <div>
         <div className="ui right action left icon large input fluid">
           <i className="search icon" />
@@ -19,8 +19,8 @@ export default () => (
         </div>
       </div>
     </Grid.Column>
-    <Grid.Column computer={2} id="search_cariBtnContainer">
-      <Button fluid className="search_cariBtn">Cari</Button>
+    <Grid.Column computer={3} id="search_cariBtnContainer">
+      <Button fluid className="search_cariBtn">Cari Beasiswa</Button>
     </Grid.Column>
   </Grid>
 

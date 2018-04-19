@@ -44,6 +44,9 @@ body {
   text-align: center !important;
   color: #ffffff !important; }
 
+#search_inputTop {
+  padding-right: 0 !important; }
+
 @media (max-width: 720px) {
   #search_topContainer {
     margin: 0 !important; } }

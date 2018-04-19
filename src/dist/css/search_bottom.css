@@ -1,0 +1,39 @@
+#search_bottomTitleText {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #5c5c5c; }
+
+#search_bottomTitleTextContainer {
+  width: 200px;
+  border-radius: 5px;
+  background-color: #e2e2e2;
+  padding: 10px !important;
+  margin-top: 20px; }
+
+@media (max-width: 767px) {
+  #search_bottomTitleTextContainer {
+    text-align: center;
+    margin: 10px auto; } }
+
+#search_filterText {
+  font-family: Roboto !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  color: #ffffff !important;
+  border-radius: 5px;
+  background-color: #bfbfbf !important;
+  text-align: center;
+  height: 100%; }
+
+#search_bottomSelectionContainer {
+  margin-top: 5px; }

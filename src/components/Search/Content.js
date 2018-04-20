@@ -26,7 +26,6 @@ export default () => (
               </div>
             </Card.Content>
           </Card>
-
         </Grid.Column>
       ))}
 

@@ -32,9 +32,9 @@ export default () => (
 
       <Button id="search_headerPostingBtn">Posting Beasiswa</Button>
     </div>
-    <div>
-      <NavLink to="#">
-        <span className="search_headerCornerText">Login</span>
+    <div className="search_headerCornerContainer">
+      <NavLink to="#" className="search_headerCornerText">
+        <span className="">Login</span>
       </NavLink>
       <NavLink to="#">
         <span className="search_headerCornerText">Daftar</span>

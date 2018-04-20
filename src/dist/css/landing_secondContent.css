@@ -1,0 +1,39 @@
+.landing_contentSecondTitle {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323233;
+  margin-top: 16px !important; }
+
+.Circle.mini.red {
+  max-width: 8px !important;
+  height: 8px !important;
+  background-color: #ff9595; }
+
+#search_contentBottomSubtitle.landing {
+  display: flex !important;
+  align-items: center !important;
+  margin-top: 8px !important; }
+
+#search_contentBottomDate.landing {
+  margin-right: 5px; }
+
+.landing_label {
+  padding: 5px 12px !important;
+  height: 26px;
+  border-radius: 13px !important;
+  background-color: #e6f2f1 !important;
+  font-family: Roboto !important;
+  font-size: 12px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  text-align: left !important;
+  color: #1f6660 !important; }

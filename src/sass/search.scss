@@ -71,6 +71,10 @@ body {
   background-color: #ededed !important;
 }
 
+.search_headerCornerContainer > .search_headerCornerText {
+  padding-right: 40px;
+}
+
 .search_headerCornerText {
   opacity: 0.8;
   font-family: Roboto;
@@ -82,10 +86,6 @@ body {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-}
-
-.search_headerCornerText:first-child {
-  padding-right: 40px;
 }
 
 #search_topDropdown {

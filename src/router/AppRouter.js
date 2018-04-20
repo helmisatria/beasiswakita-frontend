@@ -21,9 +21,9 @@ const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/board" exact component={Home} />
         <Route path="/search" exact component={Search} />
-        <Route path="/landing" exact component={Landing} />
+        <Route path="/" exact component={Landing} />
         {/* <PrivateRoute path="/" exact component={Home} />
         <PrivateRoute path="/pesanan" exact component={ListPesanan} />
         <PrivateRoute path="/pesanan/:id" exact component={DetilPesanan} />

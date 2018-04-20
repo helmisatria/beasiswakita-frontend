@@ -7,14 +7,13 @@ const options = [
   { key: 'site', text: 'Go to the bars', value: 'site' },
 ];
 
-export default () => (
+export default ({ placeholder }) => (
   <Grid stackable columns={2} id="search_gridInputTop">
     <Grid.Column computer={13} id="search_inputTop">
       <div>
         <div className="ui right action left icon large input fluid">
           <i className="search icon" />
-
-          <input type="text" placeholder="Search..." />
+          <input type="text" placeholder={placeholder || 'Search...'} />
           <Select compact placeholder="Semua Beasiswa" defaultValue="page" options={options} />
         </div>
       </div>

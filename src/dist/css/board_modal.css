@@ -7,8 +7,7 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #323233;
-  margin-bottom: 8.5px !important; }
+  color: #323233; }
 
 #board_modalSubtitle {
   font-family: Roboto;
@@ -19,7 +18,8 @@
   line-height: 1.71;
   letter-spacing: normal;
   text-align: left;
-  color: #89898c; }
+  color: #89898c;
+  padding-top: 8.5px !important; }
 
 .board_modalLabel {
   font-family: Roboto;

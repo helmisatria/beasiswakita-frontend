@@ -3,6 +3,8 @@ import { Button, Modal, Divider, Input, TextArea, Form, Dropdown } from 'semanti
 
 import '../../dist/css/board_modal.css';
 
+import CrossIcon from '../../dist/assets/cross';
+
 const kategoriBeasiswa = [
   { key: 'page', text: 'Beasiswa Atlet', value: 'page' },
   { key: 'penuh', text: 'Beasiswa Penuh', value: 'penuh' },
@@ -20,8 +22,13 @@ export default ({ open, closeModal }) => (
   <Modal dimmer="inverted" open={open} onClose={closeModal} style={{ top: '52.5vh' }} size="tiny">
     <Modal.Content image scrolling>
       <Modal.Description>
-        <span id="board_modalTitle">Track Beasiswa</span>
-        <p id="board_modalSubtitle">We've found the following gravatar image associated with your e-mail address.</p>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span id="board_modalTitle">Track Beasiswa</span>
+          <div onClick={closeModal} style={{ cursor: 'pointer' }}>
+            <CrossIcon />
+          </div>
+        </div>
+        <p id="board_modalSubtitle">We've found image associated with your e-mail address.</p>
         <Divider />
         <h4 className="board_modalLabel">Nama Beasiswa</h4>
         <Input fluid placeholder="contoh: Beasiswa LPDP 2018" className="board_modalInput" />

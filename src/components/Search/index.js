@@ -5,7 +5,7 @@ import SearchTop from './SearchTop';
 import SearchBottom from './SearchBottom';
 import Content from './Content';
 import Footer from '../Footer';
-import Header from './Header';
+import Header from '../Header/v2';
 
 export default class Search extends Component {
   state = {
@@ -20,12 +20,14 @@ export default class Search extends Component {
     return (
       <div id="search">
         <div className="search_topContainer">
-          <Header />
-          <div id="search_topContainer">
-            <h3 className="search_titleTop">Hasil Pencarian</h3>
-            <span id="search_countContentFound">302 Beasiswa ditemukan</span>
-            <SearchTop />
-            <SearchBottom />
+          <div className="search_topContainer gradient">
+            <Header />
+            <div id="search_topContainer">
+              <h3 className="search_titleTop">Hasil Pencarian</h3>
+              <span id="search_countContentFound">302 Beasiswa ditemukan</span>
+              <SearchTop />
+              <SearchBottom />
+            </div>
           </div>
         </div>
         <Content />

@@ -13,12 +13,12 @@ export default () => (
       {data.map(() => (
         <Grid.Column className="search_colContent">
           <Card fluid>
-            <Card.Content id="search_contentInsideContainer">
+            <Card.Content textAlign="left" id="search_contentInsideContainer">
               <div className="Circle" style={{ marginBottom: '16px' }} />
-              <span id="search_contentItemTitle">Beasiswa S2 Kemenpora dan Universitas Diponegoro</span>
-              <span className="ui label board_itemLabel">Beasiswa Penuh</span>
+              <p id="search_contentItemTitle">Beasiswa S2 Kemenpora dan Universitas Diponegoro</p>
+              <p className="ui label board_itemLabel">Beasiswa Penuh</p>
             </Card.Content>
-            <Card.Content extra>
+            <Card.Content textAlign="left" extra>
               <span id="search_contentBottomTitle">Pendaftaran Telah Dibuka</span>
               <div id="search_contentBottomSubtitle">
                 <TimeIcon />

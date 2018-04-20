@@ -1,0 +1,38 @@
+#landing_top {
+  height: 100vh;
+  background-image: url("../../dist/assets/landingBG.jpg");
+  background-position: center;
+  background-size: cover; }
+
+#landing_topContainer {
+  padding: 8vw 20vw; }
+
+@media (max-width: 767px) {
+  #landing_topContainer {
+    padding: 3vw 0vw; }
+  #landing_topTitle {
+    font-size: 24px !important; }
+  #landing_topSubtitle {
+    font-size: 14px !important; } }
+
+#landing_topTitle {
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff; }
+
+#landing_topSubtitle {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #cccccc; }

@@ -14,6 +14,7 @@ import {
 // import ProsesPesanan from '../components/ProsesPesanan';
 import Home from '../components/Home';
 import Search from '../components/Search';
+import Landing from '../components/Landing';
 // import Login from '../components/Login';
 
 const AppRouter = () => (
@@ -22,6 +23,7 @@ const AppRouter = () => (
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/search" exact component={Search} />
+        <Route path="/landing" exact component={Landing} />
         {/* <PrivateRoute path="/" exact component={Home} />
         <PrivateRoute path="/pesanan" exact component={ListPesanan} />
         <PrivateRoute path="/pesanan/:id" exact component={DetilPesanan} />

@@ -34,12 +34,12 @@ export default () => (
     </div>
     <div className="search_headerCornerContainer">
       <NavLink
-        to="#"
+        to="/login"
         className="search_headerCornerText"
       >
         <span>Login</span>
       </NavLink>
-      <NavLink to="#">
+      <NavLink to="/daftar">
         <span className="search_headerCornerText">Daftar</span>
       </NavLink>
     </div>

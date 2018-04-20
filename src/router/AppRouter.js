@@ -15,7 +15,8 @@ import {
 import Home from '../components/Home';
 import Search from '../components/Search';
 import Landing from '../components/Landing';
-// import Login from '../components/Login';
+import Login from '../components/Login';
+import Daftar from '../components/Daftar';
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -24,6 +25,8 @@ const AppRouter = () => (
         <Route path="/board" exact component={Home} />
         <Route path="/search" exact component={Search} />
         <Route path="/" exact component={Landing} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/daftar" exact component={Daftar} />
         {/* <PrivateRoute path="/" exact component={Home} />
         <PrivateRoute path="/pesanan" exact component={ListPesanan} />
         <PrivateRoute path="/pesanan/:id" exact component={DetilPesanan} />

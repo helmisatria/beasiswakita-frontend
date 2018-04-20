@@ -4,7 +4,7 @@ import '../../dist/css/search.css';
 import SearchTop from './SearchTop';
 import SearchBottom from './SearchBottom';
 import Content from './Content';
-import Footer from './Footer';
+import Footer from '../Footer';
 import Header from './Header';
 
 export default class Search extends Component {

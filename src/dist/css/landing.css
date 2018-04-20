@@ -4,6 +4,9 @@
   background-position: center;
   background-size: cover; }
 
+#landing_topGradientTop {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent) !important; }
+
 #landing_topContainer {
   padding: 10vw 20vw; }
 

@@ -109,3 +109,22 @@
 
 #search_contentBottomDate {
   margin-left: 8px; }
+
+@media (max-width: 1100px) {
+  .search_footerBtmItem,
+  #search_footerCredit {
+    font-size: 12.5px !important; } }
+
+@media (max-width: 767px) {
+  #search_footerContent {
+    background: #1ba3ff;
+    background-position: bottom !important;
+    background-size: inherit;
+    padding: 50px 5vw;
+    margin-top: 50px; }
+  #search_footerBtmRight {
+    display: none; } }
+
+@media (max-width: 500px) {
+  #search_footerCredit > .rights {
+    display: none; } }

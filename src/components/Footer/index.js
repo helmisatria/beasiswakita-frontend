@@ -5,7 +5,7 @@ import '../../dist/css/search_footer.css';
 
 // Icons
 import CheckCircleMini from '../../dist/assets/check-circle-mini';
-import Logo from '../../dist/assets/logoBlue.png';
+import Bottom from './Bottom';
 
 export default () => (
   <div id="search_footerContainer">
@@ -44,16 +44,6 @@ export default () => (
       </div>
       <Button size="large" id="search_footerBtnDaftar">Daftar Sekarang</Button>
     </div>
-    <div id="search_footerContentBottom">
-      <div id="search_footerBtmLeft">
-        <img src={Logo} style={{ height: '34px', marginRight: '22px' }} />
-        <span id="search_footerCredit">© 2018 Beasiswakita. All Rights Reserved</span>
-      </div>
-      <div>
-        <span className="search_footerBtmItem">Privacy Policy</span>
-        <span className="search_footerBtmItem">Terms of Service</span>
-        <span className="search_footerBtmItem">Contact</span>
-      </div>
-    </div>
+    <Bottom />
   </div>
 );

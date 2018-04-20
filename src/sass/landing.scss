@@ -124,9 +124,8 @@ $paddingContent: 0 8vw;
   height: 26px;
   display: flex;
   padding: 0 12px !important;
-  opacity: 0.5 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
   border-radius: 13.5px !important;
-  background-color: #000000 !important;
   font-family: Roboto !important;
   font-size: 12px !important;
   font-weight: normal !important;
@@ -175,14 +174,17 @@ $paddingContent: 0 8vw;
   #landing_content {
     padding: 0 14px !important;
   }
-}
-
-@media (max-width: 767px) {
   .ui.stackable.grid > .column:not(.row).column.landing_contentImgGridColumn {
     padding: 0px !important;
   }
   .gridColumnRight {
     display: flex !important;
     justify-content: flex-start !important;
+  }
+  #landing_contentFirst {
+    padding-top: 20px;
+  }
+  #landing_contentFirstContainer {
+    padding: 0;
   }
 }

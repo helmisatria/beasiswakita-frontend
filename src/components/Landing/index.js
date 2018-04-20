@@ -32,7 +32,7 @@ export default class LandingPage extends Component {
                     <h4 id="landing_headerTitle">Featured Beasiswa</h4>
                     <p id="landing_headerSubtitle">Beasiswa yang kami sarankan untuk Anda dan sedang deadline</p>
                   </Grid.Column>
-                  <Grid.Column width={3}>
+                  <Grid.Column width={3} className="gridColumnRight">
                     <Button className="landing_contentBtn">Lihat Semua</Button>
                   </Grid.Column>
                 </Grid>

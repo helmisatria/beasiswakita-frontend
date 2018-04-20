@@ -13,7 +13,6 @@ export default ({ isExplore }) => (
     <div id="search_headerContainer">
       <NavLink to="/">
         <img src={Logo} style={{ height: '34px', marginRight: '45px' }} />
-
       </NavLink>
       <NavLink to="#" style={{ display: 'flex' }}>
         <div className={`${!isExplore && 'disabled'} sidebarContainer`}>
@@ -37,20 +36,6 @@ export default ({ isExplore }) => (
       <Grid>
         <Grid.Column only="tablet computer">
           <Button id="search_headerPostingBtn">Posting Beasiswa</Button>
-        </Grid.Column>
-      </Grid>
-    </div>
-    <div className="search_headerCornerContainer">
-      <Grid>
-        <Grid.Column only="tablet computer">
-          <NavLink
-            to="/login"
-          >
-            <span className="search_headerCornerText login">Login</span>
-          </NavLink>
-          <NavLink to="/daftar">
-            <span className="search_headerCornerText">Daftar</span>
-          </NavLink>
         </Grid.Column>
       </Grid>
     </div>
@@ -85,7 +70,21 @@ export default ({ isExplore }) => (
           </Dropdown.Menu>
         </Dropdown>
       </Grid.Column>
-
     </Grid>
+    <div className="search_headerCornerContainer">
+      <Grid>
+        <Grid.Column only="tablet computer">
+          <NavLink
+            to="/login"
+          >
+            <span className="search_headerCornerText login">Login</span>
+          </NavLink>
+          <NavLink to="/daftar">
+            <span className="search_headerCornerText">Daftar</span>
+          </NavLink>
+
+        </Grid.Column>
+      </Grid>
+    </div>
   </div>
 );

@@ -61,9 +61,6 @@ body {
 .search_topContainer.gradient {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent) !important; }
 
-.search_headerCornerContainer > .search_headerCornerText {
-  padding-right: 40px; }
-
 .search_headerCornerText {
   opacity: 0.8;
   font-family: Roboto;

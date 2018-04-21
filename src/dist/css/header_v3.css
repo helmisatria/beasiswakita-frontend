@@ -1,0 +1,21 @@
+#header_v3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+#header_v3 > div > #logo {
+  border-right: 1px solid rgba(50, 50, 51, 0.3);
+  padding-right: 20px; }
+
+#header_v3Subtitle {
+  opacity: 0.8;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #072652;
+  margin-left: 20px; }

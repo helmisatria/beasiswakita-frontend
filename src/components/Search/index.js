@@ -22,7 +22,7 @@ export default class Search extends Component {
       <div id="search">
         <div className="search_topContainer">
           <div className="search_topContainer gradient">
-            <Header />
+            <Header isExplore />
             <div id="search_topContainer">
               <h3 className="search_titleTop">Hasil Pencarian</h3>
               <span id="search_countContentFound">302 Beasiswa ditemukan</span>

@@ -1,0 +1,93 @@
+$padding: 0 10vw;
+$paddingMobile: 0 2vw;
+
+#pDaftar {
+  // padding-bottom: 5vw;
+}
+
+#partnerPadding {
+  padding: $padding;
+}
+
+#partnerPadding.header {
+  margin-bottom: 4.5vw;
+  padding-top: 20px;
+}
+
+.margintop20 {
+  margin-top: 20px;
+}
+
+.pDaftar.title {
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #072652;
+  margin-bottom: 40px !important;
+}
+
+#pDaftarLeft {
+  padding-right: 35px;
+}
+
+.pDaftar.paraghraph {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #646466;
+}
+
+.pDaftar.inputLabel {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #323233;
+}
+
+.pDaftar.inputLabel:not(:first-child) {
+  margin-top: 16.5px;
+}
+
+#pDaftarSubmitBtn {
+  margin-top: 24px;
+  border-radius: 3px;
+  background-image: linear-gradient(to top, #4ab6ff, #1ba3ff);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  #partnerPadding {
+    padding: $paddingMobile;
+  }
+  #partnerPadding.header {
+    padding-top: 2vw;
+  }
+  #partnerPadding.pDaftarMobilePadding {
+    padding-left: 24px;
+  }
+  .pDaftar.pDaftarMobilePadding {
+    padding-left: 12px;
+  }
+}

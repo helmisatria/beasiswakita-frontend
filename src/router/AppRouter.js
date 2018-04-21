@@ -18,6 +18,7 @@ import Landing from '../components/Landing';
 import Login from '../components/Login';
 import Daftar from '../components/Daftar';
 import DetilBeasiswa from '../components/DetilBeasiswa';
+import PartnerDaftar from '../components/PartnerDaftar';
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -29,6 +30,7 @@ const AppRouter = () => (
         <Route path="/login" exact component={Login} />
         <Route path="/daftar" exact component={Daftar} />
         <Route path="/detilBeasiswa" exact component={DetilBeasiswa} />
+        <Route path="/partnership" exact component={PartnerDaftar} />
         {/* <PrivateRoute path="/" exact component={Home} />
         <PrivateRoute path="/pesanan" exact component={ListPesanan} />
         <PrivateRoute path="/pesanan/:id" exact component={DetilPesanan} />

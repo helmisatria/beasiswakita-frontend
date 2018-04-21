@@ -14,7 +14,7 @@ export default ({ isExplore }) => (
       <NavLink to="/">
         <img src={Logo} style={{ height: '34px', marginRight: '45px' }} />
       </NavLink>
-      <NavLink to="#" style={{ display: 'flex' }}>
+      <NavLink to="/search" style={{ display: 'flex' }}>
         <div className={`${!isExplore && 'disabled'} sidebarContainer`}>
           <FindIcon />
         </div>
@@ -35,7 +35,9 @@ export default ({ isExplore }) => (
       </NavLink>
       <Grid>
         <Grid.Column only="tablet computer">
-          <Button id="search_headerPostingBtn">Posting Beasiswa</Button>
+          <NavLink to="/partnership" style={{ display: 'flex' }}>
+            <Button id="search_headerPostingBtn">Posting Beasiswa</Button>
+          </NavLink>
         </Grid.Column>
       </Grid>
     </div>

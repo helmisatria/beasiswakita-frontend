@@ -18,8 +18,8 @@ export default class SecondContent extends Component {
       <div>
         <Grid stackable columns={2}>
           <Grid.Column width={13}>
-            <h4 id="landing_headerTitle">Akan segera berakhir</h4>
-            <p id="landing_headerSubtitle">Beasiswa yang kami sarankan untuk Anda dan sedang deadline</p>
+            <h4 id="landing_headerTitle">Beasiswa Terbaru</h4>
+            <p id="landing_headerSubtitle">Beasiswa yang kami sarankan untuk Anda dan terbaru</p>
           </Grid.Column>
           <Grid.Column width={3} className="gridColumnRight">
             <Button className="landing_contentBtn" style={{ left: 0 }}>Lihat Semua</Button>

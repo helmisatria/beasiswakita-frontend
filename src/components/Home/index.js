@@ -7,7 +7,7 @@ import '../../dist/css/home.css';
 // Components
 import HeaderItem from './HeaderItem';
 import Item from './Item';
-import Header from './Header';
+import Header from '../Header';
 import Modal from './Modal';
 
 // Icons

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Button, Card, Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import TimeIcon from '../../dist/assets/time';
 
@@ -27,14 +28,16 @@ export default class SecondContent extends Component {
         <Grid stackable doubling centered columns={4}>
           {data.map(() => (
             <Grid.Column>
-              <Card fluid centered>
-                <Card.Content>
-                  <div className="Circle" />
-                  <p className="landing_contentSecondTitle">Beasiswa Seni dan Budaya Indonesia 2018</p>
-                  <Button className="landing_label">Beasiswa Penuh</Button>
+              <Link to="/detilBeasiswa">
+                <Card fluid centered link>
+                  <Card.Content>
+                    <div className="Circle" />
+                    <p className="landing_contentSecondTitle">Beasiswa Seni dan Budaya Indonesia 2018</p>
+                    <Button className="landing_label">Beasiswa Penuh</Button>
 
-                </Card.Content>
-              </Card>
+                  </Card.Content>
+                </Card>
+              </Link>
             </Grid.Column>
             ))}
         </Grid>

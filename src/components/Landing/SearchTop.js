@@ -1,6 +1,8 @@
 import React from 'react';
 import { Select, Grid, Button } from 'semantic-ui-react';
 
+import { Link } from 'react-router-dom';
+
 const options = [
   { key: 'page', text: 'Semua Beasiswa', value: 'page' },
   { key: 'org', text: 'All of them', value: 'org' },
@@ -18,9 +20,11 @@ export default ({ placeholder }) => (
         </div>
       </div>
     </Grid.Column>
-    <Grid.Column computer={3} id="search_cariBtnContainer">
-      <Button fluid className="search_cariBtn">Cari Beasiswa</Button>
-    </Grid.Column>
+    <Link to="/search">
+      <Grid.Column computer={3} id="search_cariBtnContainer">
+        <Button fluid className="search_cariBtn">Cari Beasiswa</Button>
+      </Grid.Column>
+    </Link>
   </Grid>
 
 );

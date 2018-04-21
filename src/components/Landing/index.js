@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Grid, Icon, Divider } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import '../../dist/css/landing.css';
 
@@ -12,6 +13,10 @@ import Footer from '../Footer';
 export default class LandingPage extends Component {
   state = {
 
+  }
+
+  componentDidMount() {
+    document.body.style.backgroundColor = '#f1f3f5';
   }
 
   render() {
@@ -40,34 +45,34 @@ export default class LandingPage extends Component {
                 </Grid>
                 <Grid stackable stretched columns={3}>
                   <Grid.Column className="landing_contentImgGridColumn first">
-                    <div className="landing_contentImg img1">
+                    <Link to="/detilBeasiswa" className="landing_contentImg img1">
                       <Button className="landing_contentImgBtn">Beasiswa Penuh</Button>
                       <p id="landing_contentImgTitle">Disaster Regeneration Scholarship, University of Westminster</p>
                       <div>
                         <span id="landing_contentImgLengkap">Selengkapnya</span>
                         <Icon color="grey" name="chevron right" />
                       </div>
-                    </div>
+                    </Link>
                   </Grid.Column>
                   <Grid.Column className="landing_contentImgGridColumn second">
-                    <div className="landing_contentImg img2">
+                    <Link to="/detilBeasiswa" className="landing_contentImg img2">
                       <Button className="landing_contentImgBtn">Beasiswa Penuh</Button>
                       <p id="landing_contentImgTitle">Beasiswa Monbukagakusho Jepang 2018/2019</p>
                       <div>
                         <span id="landing_contentImgLengkap">Selengkapnya</span>
                         <Icon color="grey" name="chevron right" />
                       </div>
-                    </div>
+                    </Link>
                   </Grid.Column>
                   <Grid.Column className="landing_contentImgGridColumn third">
-                    <div className="landing_contentImg img3">
+                    <Link to="/detilBeasiswa" className="landing_contentImg img3">
                       <Button className="landing_contentImgBtn">Beasiswa Penuh</Button>
                       <p id="landing_contentImgTitle">Beasiswa S2 di Thailand - Full 2018 - 2019, School of Environment</p>
                       <div>
                         <span id="landing_contentImgLengkap">Selengkapnya</span>
                         <Icon color="grey" name="chevron right" />
                       </div>
-                    </div>
+                    </Link>
                   </Grid.Column>
                 </Grid>
               </div>
@@ -75,7 +80,7 @@ export default class LandingPage extends Component {
             <div id="landing_content">
               <SecondContent />
             </div>
-            <Divider style={{ margin: '55px 0' }} />
+            <Divider fitted style={{ margin: '55px 0' }} />
             <div id="landing_content">
               <ThirdContent />
             </div>

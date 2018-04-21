@@ -14,6 +14,7 @@ export default class Search extends Component {
 
   componentDidMount() {
     document.body.style.overflowX = 'hidden';
+    document.body.style.backgroundColor = '#f1f3f5';
   }
 
   render() {

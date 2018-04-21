@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Button, Card, Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import TimeIcon from '../../dist/assets/time';
 
@@ -14,7 +15,7 @@ export default class SecondContent extends Component {
     const data = [0, 0, 0, 0];
 
     return (
-      <div>
+      <div id="landing_secondContent">
         <Grid stackable columns={2}>
           <Grid.Column width={13}>
             <h4 id="landing_headerTitle">Akan segera berakhir</h4>
@@ -27,22 +28,25 @@ export default class SecondContent extends Component {
         <Grid stackable doubling centered columns={4}>
           {data.map(() => (
             <Grid.Column>
-              <Card fluid centered>
-                <Card.Content>
-                  <div className="Circle" />
-                  <p className="landing_contentSecondTitle">Beasiswa Seni dan Budaya Indonesia 2018</p>
-                  <Button className="landing_label">Beasiswa Penuh</Button>
-                </Card.Content>
-                <Card.Content extra>
-                  <span id="search_contentBottomTitle">Sisa Waktu Pendaftaran</span>
-                  <div id="search_contentBottomSubtitle" className="landing">
-                    <TimeIcon />
-                    <span id="search_contentBottomDate" className="landing">20 Hari, 40 Menit, 70 Detik</span>
-                    <Icon name="circle" size="small" style={{ color: '#ff9595' }} />
-                  </div>
-                </Card.Content>
-              </Card>
+              <Link to="/detilBeasiswa">
+                <Card fluid centered link>
+                  <Card.Content>
+                    <div className="Circle" />
+                    <p className="landing_contentSecondTitle">Beasiswa Seni dan Budaya Indonesia 2018</p>
+                    <Button className="landing_label">Beasiswa Penuh</Button>
+                  </Card.Content>
+                  <Card.Content extra>
+                    <span id="search_contentBottomTitle">Sisa Waktu Pendaftaran</span>
+                    <div id="search_contentBottomSubtitle" className="landing">
+                      <TimeIcon />
+                      <span id="search_contentBottomDate" className="landing">20 Hari, 40 Menit, 70 Detik</span>
+                      <Icon name="circle" size="small" style={{ color: '#ff9595' }} />
+                    </div>
+                  </Card.Content>
+                </Card>
+              </Link>
             </Grid.Column>
+
             ))}
         </Grid>
       </div>

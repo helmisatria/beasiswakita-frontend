@@ -20,7 +20,9 @@ export default class Header extends Component {
   render() {
     return (
       <div id="headerContainer">
-        <img src={Logo} id="headerLogo" />
+        <NavLink to="/">
+          <img src={Logo} id="headerLogo" />
+        </NavLink>
         <NavLink to="#" style={{ display: 'flex' }}>
           <div className="sidebarContainer">
             <SideBarIcon />

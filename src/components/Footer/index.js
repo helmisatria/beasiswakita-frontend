@@ -1,7 +1,9 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 import '../../dist/css/search_footer.css';
+
 
 // Icons
 import CheckCircleMini from '../../dist/assets/check-circle-mini';
@@ -42,7 +44,9 @@ export default () => (
           <span className="search_footerPoin">dan banyak lagi!</span>
         </div>
       </div>
-      <Button size="large" id="search_footerBtnDaftar">Daftar Sekarang</Button>
+      <NavLink to="/daftar">
+        <Button size="large" id="search_footerBtnDaftar">Daftar Sekarang</Button>
+      </NavLink>
     </div>
     <Bottom />
   </div>

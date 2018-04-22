@@ -4,15 +4,25 @@ import { Button, Grid, Flag, Card, Divider } from 'semantic-ui-react';
 import '../../dist/css/partnerBoard.css';
 
 import Header from '../Header';
+import Modal from './Modal';
 
 export default class PartnerBoard extends Component {
   state = {
-
+    isOpenModal: false,
   }
 
   componentDidMount() {
     document.body.style.backgroundColor = '#f1f3f5';
   }
+
+  openModal = () => {
+    this.setState({ isOpenModal: true });
+  }
+
+  closeModal = () => {
+    this.setState({ isOpenModal: false });
+  }
+
 
   render() {
     const data = [
@@ -32,14 +42,14 @@ export default class PartnerBoard extends Component {
 
     return (
       <div>
-        <Header dashboard message padding="0 10vw" />
+        <Header dashboard message padding="0 12vw" />
         <Grid stackable id="partnerBoard" columns={2} className="topContainer pBoardPadding">
           <Grid.Column width={13}>
             <h2 id="pBoardTitle">Beasiswa Anda</h2>
 
           </Grid.Column>
           <Grid.Column width={3}>
-            <Button fluid positive id="pBoardBtn">Posting Beasiswa</Button>
+            <Button fluid positive id="pBoardBtn" onClick={() => this.openModal()}>Posting Beasiswa</Button>
 
           </Grid.Column>
         </Grid>
@@ -72,6 +82,7 @@ export default class PartnerBoard extends Component {
             </Card>
           </Grid.Column>
         </Grid>
+        <Modal closeModal={this.closeModal} open={this.state.isOpenModal} />
       </div>
     );
   }

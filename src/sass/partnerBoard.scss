@@ -1,4 +1,4 @@
-$padding: 0 10vw !important;
+$padding: 0 12vw !important;
 $paddingMobile: 0 3vw !important;
 
 #partnerBoard {
@@ -110,6 +110,22 @@ $paddingMobile: 0 3vw !important;
   letter-spacing: normal;
   text-align: center;
   color: #89898c;
+}
+
+.pBoard.paragraph {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.14;
+  letter-spacing: normal;
+  text-align: left;
+  color: #646466;
+}
+
+#datepickerStart {
+  text-align: center !important;
 }
 
 @media (max-width: 767px) {

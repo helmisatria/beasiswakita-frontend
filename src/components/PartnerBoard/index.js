@@ -12,6 +12,7 @@ export default class PartnerBoard extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     document.body.style.backgroundColor = '#f1f3f5';
   }
 
@@ -74,7 +75,7 @@ export default class PartnerBoard extends Component {
             </Grid.Column>
           ))}
           <Grid.Column>
-            <Card fluid link id="pBoardCard" className="card dashed">
+            <Card fluid link id="pBoardCard" className="card dashed" onClick={() => this.openModal()}>
               <Card.Content className="content dashed flex center">
                 <p className="pBoardCard title dashed">Yuk posting beasiswa baru dan nikmati kemudahannya!</p>
                 <p className="pBoardCard subtitle dashed">Gratis tanpa biaya apapun, dijamin!</p>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Input, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import '../../dist/css/partnerDaftar.css';
 import Header from '../Header/v3';
@@ -14,6 +15,7 @@ export default class PartnerDaftar extends Component {
 
   componentDidMount() {
     document.body.style.backgroundColor = 'white';
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -57,7 +59,9 @@ export default class PartnerDaftar extends Component {
             <Input className="pDaftar input" fluid placeholder="contoh: gema@mail.com" />
             <p className="pDaftar inputLabel">Password</p>
             <Input className="pDaftar input" fluid />
-            <Button fluid id="pDaftarSubmitBtn">Menjadi Partner</Button>
+            <Link to="/partnership/board">
+              <Button fluid id="pDaftarSubmitBtn">Menjadi Partner</Button>
+            </Link>
           </Grid.Column>
         </Grid>
       </div>

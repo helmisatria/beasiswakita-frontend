@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Input, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import '../../dist/css/partnerDaftar.css';
 import Header from '../Header/v3';
@@ -14,6 +15,7 @@ export default class PartnerDaftar extends Component {
 
   componentDidMount() {
     document.body.style.backgroundColor = 'white';
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -29,7 +31,7 @@ export default class PartnerDaftar extends Component {
           <Header />
         </div>
         <div id="partnerPadding">
-          <h2 className="pDaftar title pDaftarMobilePadding">Mulai menjadi <br /> partner beasiswa</h2>
+          <h2 className="pDaftar title pDaftarMobilePadding">Mulai menjadi partner beasiswa</h2>
         </div>
         <Grid stackable columns={2} id="partnerPadding">
           <Grid.Column computer={10} id="pDaftarLeft">
@@ -48,14 +50,18 @@ export default class PartnerDaftar extends Component {
           </Grid.Column>
           <Grid.Column computer={6}>
             <p className="pDaftar inputLabel">Nama Lengkap</p>
-            <Input fluid placeholder="contoh: Gema Abriantini" />
-            <p className="pDaftar inputLabel">Email</p>
-            <Input fluid placeholder="contoh: gema@mail.com" />
+            <Input className="pDaftar input" fluid placeholder="contoh: Gema Abriantini" />
             <p className="pDaftar inputLabel">Yayasan/Perusahaan</p>
-            <Input fluid placeholder="Business, Inc." />
+            <Input className="pDaftar input" fluid placeholder="Business, Inc." />
+            <p className="pDaftar inputLabel">Logo Yayasan/Perusahaan</p>
+            <Input className="pDaftar input" type="file" fluid placeholder="Business, Inc." />
+            <p className="pDaftar inputLabel">Email</p>
+            <Input className="pDaftar input" fluid placeholder="contoh: gema@mail.com" />
             <p className="pDaftar inputLabel">Password</p>
-            <Input fluid />
-            <Button fluid id="pDaftarSubmitBtn">Menjadi Partner</Button>
+            <Input className="pDaftar input" fluid />
+            <Link to="/partnership/board">
+              <Button fluid id="pDaftarSubmitBtn">Menjadi Partner</Button>
+            </Link>
           </Grid.Column>
         </Grid>
       </div>

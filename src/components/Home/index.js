@@ -144,7 +144,7 @@ export default class Home extends Component {
     return (
       <div>
         <Modal open={this.state.openModal} closeModal={this.handleCloseModalAddBeasiswa} />
-        <Header />
+        <Header board message explore />
         <div className="board">
           <div className="board-column">
             <div className="board-column-header">

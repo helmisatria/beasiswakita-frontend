@@ -20,14 +20,42 @@ const api = apiCreate();
 
 export default function * root () {
   yield all([
+    // Authentication
     takeLatest(
       AuthenticationTypes.LOGIN_REQUEST,
       Authentication(api).login
     ),
 
+    // Scholarship
     takeLatest(
       ScholarshipTypes.GET_REQUEST,
       Scholarship(api).list
+    ),
+
+    // StudentBoard
+    takeLatest(
+      StudentBoardTypes.CREATE_REQUEST,
+      StudentBoard(api).create
+    ),
+
+    takeLatest(
+      StudentBoardTypes.GET_REQUEST,
+      StudentBoard(api).get
+    ),
+
+    takeLatest(
+      StudentBoardTypes.UPDATE_REQUEST,
+      StudentBoard(api).update
+    ),
+
+    takeLatest(
+      StudentBoardTypes.CHANGE_REQUEST,
+      StudentBoard(api).change
+    ),
+
+    takeLatest(
+      StudentBoardTypes.DELETE_REQUEST,
+      StudentBoard(api).delete
     ),
 
   ]);

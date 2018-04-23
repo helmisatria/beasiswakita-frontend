@@ -4,11 +4,15 @@
 
 export const Authentication = (api) => {
   const get = {
+    current: () =>
+      api.get('me')
   };
 
   const post = {
     login: params =>
-      api.post('login', params)
+      api.post('login', params),
+    register: params =>
+      api.post('users', params),
   };
 
   const put = {

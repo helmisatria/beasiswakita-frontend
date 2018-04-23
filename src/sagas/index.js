@@ -26,10 +26,30 @@ export default function * root () {
       Authentication(api).login
     ),
 
+    takeLatest(
+      AuthenticationTypes.ORGANIZATION_REQUEST,
+      Authentication(api).organization
+    ),
+
+    takeLatest(
+      AuthenticationTypes.STUDENT_REQUEST,
+      Authentication(api).student
+    ),
+
+    takeLatest(
+      AuthenticationTypes.GET_USER_REQUEST,
+      Authentication(api).current
+    ),
+
     // Scholarship
     takeLatest(
       ScholarshipTypes.GET_REQUEST,
       Scholarship(api).list
+    ),
+
+    takeLatest(
+      ScholarshipTypes.CREATE_REQUEST,
+      Scholarship(api).create
     ),
 
     // StudentBoard

@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { Grid, Input, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
+import { connect } from 'react-redux';
+
 import '../../dist/css/partnerDaftar.css';
 import Header from '../Header/v3';
 
 import CheckboxIcon from '../../dist/assets/checkbox';
 
 
-export default class PartnerDaftar extends Component {
+class PartnerDaftar extends Component {
   state = {
 
   }
@@ -68,3 +70,15 @@ export default class PartnerDaftar extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+
+});
+
+const mapDispatchToProps = {
+
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(PartnerDaftar);
+

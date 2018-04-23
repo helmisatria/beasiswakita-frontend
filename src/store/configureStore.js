@@ -1,23 +1,28 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 
 // Reducers
-// import listPesananReducer from '../reducers/listPesanan';
-// import prosesPesananReducer from '../reducers/prosesPesanan';
-// import tokoReducer from '../reducers/home';
+import { reducer as scholarship } from '../reducers/ScholarshipRedux';
+
+import rootSagas from '../sagas';
+
+// Combine Reducers
+const reducers = {
+  scholarship,
+};
 
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const sagaMiddleware = createSagaMiddleware();
 
 export default () => {
   const store = createStore(
-    combineReducers({
-      // listPesanan: listPesananReducer,
-      // toko: tokoReducer,
-      // prosesPesanan: prosesPesananReducer,
-    }),
-    composeEnhancers(applyMiddleware(thunk)),
+    combineReducers(reducers),
+    //composeEnhancers(applyMiddleware(thunk)),
+    composeEnhancers(applyMiddleware(sagaMiddleware))
   );
+  sagaMiddleware.run(rootSagas);
 
   return store;
 };

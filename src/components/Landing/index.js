@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Button, Grid, Icon, Divider } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
+import { connect } from 'react-redux';
+
+import ScholarshipAction from '../../reducers/ScholarshipRedux';
+
 import '../../dist/css/landing.css';
 
 import Search from './SearchTop';
@@ -10,14 +14,26 @@ import SecondContent from './SecondContent';
 import ThirdContent from './ThirdContent';
 import Footer from '../Footer';
 
-export default class LandingPage extends Component {
+class LandingPage extends Component {
   state = {
 
   }
 
+
+  componentWillMount () {
+    this.props.getList();
+  }
+
+
   componentDidMount() {
     document.body.style.backgroundColor = '#f1f3f5';
   }
+
+
+  componentWillReceiveProps (nextProps) {
+    console.log({ nextProps });
+  }
+
 
   render() {
     return (
@@ -91,3 +107,20 @@ export default class LandingPage extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    fetching: state.scholarship.fetching,
+    error: state.scholarship.error,
+    message: state.scholarship.message,
+    data: state.scholarship.data
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getList: () => dispatch(ScholarshipAction.getRequest()),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LandingPage);

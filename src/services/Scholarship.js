@@ -5,12 +5,12 @@
 export const ScholarshipService = (api) => {
   const get = {
     list: params =>
-      api.get('scholarships', params)
+      api.get('scholarships', params),
   };
 
   const post = {
     create: params =>
-      api.post('scholarships', params)
+      api.post('scholarships', params),
   };
 
   const put = {
@@ -27,7 +27,7 @@ export const ScholarshipService = (api) => {
     post,
     put,
     patch,
-    delete: _delete
+    delete: _delete,
   };
 };
 

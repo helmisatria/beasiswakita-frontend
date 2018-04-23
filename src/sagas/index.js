@@ -18,7 +18,7 @@ import { Scholarship } from './ScholarshipSagas';
 
 const api = apiCreate();
 
-export default function * root () {
+export default function* root() {
   yield all([
     // Authentication
     takeLatest(
@@ -44,7 +44,7 @@ export default function * root () {
     // Scholarship
     takeLatest(
       ScholarshipTypes.GET_REQUEST,
-      Scholarship(api).list
+      Scholarship(api).list,
     ),
 
     takeLatest(

@@ -14,12 +14,12 @@ import { Scholarship } from './ScholarshipSagas';
 
 const api = apiCreate();
 
-export default function * root () {
+export default function* root() {
   yield all([
 
     takeLatest(
       ScholarshipTypes.GET_REQUEST,
-      Scholarship(api).list
+      Scholarship(api).list,
     ),
 
   ]);

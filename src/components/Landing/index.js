@@ -20,7 +20,7 @@ class LandingPage extends Component {
   }
 
 
-  componentWillMount () {
+  componentWillMount() {
     this.props.getList();
   }
 
@@ -30,7 +30,7 @@ class LandingPage extends Component {
   }
 
 
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps(nextProps) {
     console.log({ nextProps });
   }
 
@@ -108,19 +108,15 @@ class LandingPage extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    fetching: state.scholarship.fetching,
-    error: state.scholarship.error,
-    message: state.scholarship.message,
-    data: state.scholarship.data
-  }
-}
+const mapStateToProps = state => ({
+  fetching: state.scholarship.fetching,
+  error: state.scholarship.error,
+  message: state.scholarship.message,
+  data: state.scholarship.data,
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getList: () => dispatch(ScholarshipAction.getRequest()),
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  getList: () => dispatch(ScholarshipAction.getRequest()),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(LandingPage);

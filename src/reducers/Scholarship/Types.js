@@ -9,7 +9,7 @@ export const types = {
 
   createRequest: ['params'],
   createSuccess: ['data'],
-  createFailure: ['message']
-}
+  createFailure: ['message'],
+};
 
 // src/reducers/Scholarship/Types.js

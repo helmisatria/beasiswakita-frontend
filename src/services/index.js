@@ -11,7 +11,7 @@ const baseURL = 'http://basisdatalab.com:8061/';
 export const apiCreate = () => {
   const api = create({
     baseURL,
-    headers: {}
+    headers: {},
   });
 
   return {

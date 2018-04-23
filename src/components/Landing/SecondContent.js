@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Button, Card, Icon } from 'semantic-ui-react';
+import { Grid, Button, Card, Icon, Flag } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 import TimeIcon from '../../dist/assets/time';
@@ -34,6 +34,10 @@ export default class SecondContent extends Component {
                     <div className="Circle" />
                     <p className="landing_contentSecondTitle">Beasiswa Seni dan Budaya Indonesia 2018</p>
                     <Button className="landing_label">Beasiswa Penuh</Button>
+                    <div className="flex center">
+                      <Flag name="id" />
+                      <span>Indonesia</span>
+                    </div>
                   </Card.Content>
                   <Card.Content extra>
                     <span id="search_contentBottomTitle">Sisa Waktu Pendaftaran</span>

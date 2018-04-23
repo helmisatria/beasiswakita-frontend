@@ -3,12 +3,16 @@ import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 
 // Reducers
+import { reducer as Authentication } from '../reducers/AuthenticationRedux';
+import { reducer as StudentBoard } from '../reducers/StudentBoardRedux';
 import { reducer as scholarship } from '../reducers/ScholarshipRedux';
 
 import rootSagas from '../sagas';
 
 // Combine Reducers
 const reducers = {
+ 	Authentication,
+ 	StudentBoard,
   scholarship,
 };
 

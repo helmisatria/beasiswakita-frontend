@@ -1,6 +1,6 @@
 # Beasiswakita Frontend
 
-This is a source code for daruma projcet.
+This is a source code for beasiswakita projcet.
 
 ## Getting Started
 

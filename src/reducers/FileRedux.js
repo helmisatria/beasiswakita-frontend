@@ -1,29 +1,28 @@
 /**
- * Authentication Redux
+ * File Redux
  */
 
 import { createReducer, createActions } from 'reduxsauce';
 import Immutable from 'seamless-immutable';
 
-import { types } from './Authentication/Types';
-import { reducers } from './Authentication/Reducers';
-import { actions } from './Authentication/Actions';
+import { types } from './File/Types';
+import { reducers } from './File/Reducers';
+import { actions } from './File/Actions';
 
-const prefix = 'AUTHENTICATION_';
+const prefix = 'FILE_';
 
 const { Types, Creators } = createActions(types, { prefix });
 
-export const AuthenticationTypes = Types;
+export const FileTypes = Types;
 export default Creators;
 
 export const INITIAL_STATE = Immutable({
   error: false,
   fetching: false,
   message: null,
-  owner: null,
 });
 
 export const reducer =
   createReducer(INITIAL_STATE, reducers(Types, actions));
 
-// src/reducers/AuthenticationRedux.js
+// src/reducers/FileRedux.js

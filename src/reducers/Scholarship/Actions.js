@@ -7,7 +7,7 @@ export const actions = {
     state.merge({
       error: false,
       fetching: true,
-      message: null
+      message: null,
     }),
 
   getSuccess: (state, { data }) =>
@@ -16,23 +16,23 @@ export const actions = {
 
       error: false,
       fetching: false,
-      message: null
+      message: null,
     }),
 
   getFailure: (state, { message }) =>
     state.merge({
       error: true,
       fetching: false,
-      message
+      message,
     }),
 
   createRequest: (state, { params }) =>
     state.merge({
-      params, 
+      params,
 
       error: false,
       fetching: true,
-      message: null
+      message: null,
     }),
 
   createSuccess: (state, { data }) =>
@@ -41,14 +41,14 @@ export const actions = {
 
       error: false,
       fetching: false,
-      message: null
+      message: null,
     }),
 
   createFailure: (state, { message }) =>
     state.merge({
       error: true,
       fetching: false,
-      message
+      message,
     }),
 };
 

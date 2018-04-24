@@ -4,6 +4,7 @@
 
 import { create } from 'apisauce';
 
+import { File } from './File';
 import { Authentication } from './Authentication';
 import { StudentBoard } from './StudentBoard';
 import { ScholarshipService } from './Scholarship';
@@ -17,6 +18,7 @@ export const apiCreate = () => {
   });
 
   return {
+ 		File: File(api),
  		Authentication: Authentication(api),
  		StudentBoard: StudentBoard(api),
     Scholarship: ScholarshipService(api),

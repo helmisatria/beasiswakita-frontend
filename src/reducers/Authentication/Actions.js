@@ -9,21 +9,23 @@ export const actions = {
 
       error: false,
       fetching: true,
-      message: null
+      message: null,
     }),
 
-  loginSuccess: state =>
+  loginSuccess: (state, { owner }) =>
     state.merge({
+      owner,
+
       error: false,
       fetching: false,
-      message: null
+      message: null,
     }),
 
   loginFailure: (state, { message }) =>
     state.merge({
       error: true,
       fetching: false,
-      message
+      message,
     }),
 
   studentRequest: (state, { params }) =>
@@ -32,21 +34,21 @@ export const actions = {
 
       error: false,
       fetching: true,
-      message: null
+      message: null,
     }),
 
   studentRequest: (state, { data }) =>
     state.merge({
       error: false,
       fetching: false,
-      message: null
+      message: null,
     }),
 
   studentFailure: (state, { message }) =>
     state.merge({
       error: true,
       fetching: false,
-      message
+      message,
     }),
 
   organizationRequest: (state, { params }) =>
@@ -55,44 +57,44 @@ export const actions = {
 
       error: false,
       fetching: true,
-      message: null
+      message: null,
     }),
 
   organizationSuccess: (state, { data }) =>
     state.merge({
       error: false,
       fetching: false,
-      message: null
+      message: null,
     }),
 
   organizationFailure: (state, { message }) =>
     state.merge({
       error: true,
       fetching: false,
-      message
+      message,
     }),
 
-  getUserRequest: state =>
+  getUserRequest: (state, { params }) =>
     state.merge({
       params,
 
       error: false,
       fetching: true,
-      message: null
+      message: null,
     }),
 
   getUserSuccess: (state, { data }) =>
     state.merge({
       error: false,
       fetching: false,
-      message: null
+      message: null,
     }),
 
   getUserFailure: (state, { message }) =>
     state.merge({
       error: true,
       fetching: false,
-      message
+      message,
     }),
 };
 

@@ -7,11 +7,13 @@ import { takeLatest, all } from 'redux-saga/effects';
 import { apiCreate } from '../services';
 
 // Redux types
+import { FileTypes } from '../reducers/FileRedux';
 import { AuthenticationTypes } from '../reducers/AuthenticationRedux';
 import { StudentBoardTypes } from '../reducers/StudentBoardRedux';
 import { ScholarshipTypes } from '../reducers/ScholarshipRedux';
 
 // Sagas functions
+import { File } from './FileSagas';
 import { Authentication } from './AuthenticationSagas';
 import { StudentBoard } from './StudentBoardSagas';
 import { Scholarship } from './ScholarshipSagas';
@@ -23,22 +25,22 @@ export default function* root() {
     // Authentication
     takeLatest(
       AuthenticationTypes.LOGIN_REQUEST,
-      Authentication(api).login
+      Authentication(api).login,
     ),
 
     takeLatest(
       AuthenticationTypes.ORGANIZATION_REQUEST,
-      Authentication(api).organization
+      Authentication(api).organization,
     ),
 
     takeLatest(
       AuthenticationTypes.STUDENT_REQUEST,
-      Authentication(api).student
+      Authentication(api).student,
     ),
 
     takeLatest(
       AuthenticationTypes.GET_USER_REQUEST,
-      Authentication(api).current
+      Authentication(api).current,
     ),
 
     // Scholarship
@@ -49,35 +51,39 @@ export default function* root() {
 
     takeLatest(
       ScholarshipTypes.CREATE_REQUEST,
-      Scholarship(api).create
+      Scholarship(api).create,
     ),
 
     // StudentBoard
     takeLatest(
       StudentBoardTypes.CREATE_REQUEST,
-      StudentBoard(api).create
+      StudentBoard(api).create,
     ),
 
     takeLatest(
       StudentBoardTypes.GET_REQUEST,
-      StudentBoard(api).get
+      StudentBoard(api).get,
     ),
 
     takeLatest(
       StudentBoardTypes.UPDATE_REQUEST,
-      StudentBoard(api).update
+      StudentBoard(api).update,
     ),
 
     takeLatest(
       StudentBoardTypes.CHANGE_REQUEST,
-      StudentBoard(api).change
+      StudentBoard(api).change,
     ),
 
     takeLatest(
       StudentBoardTypes.DELETE_REQUEST,
-      StudentBoard(api).delete
+      StudentBoard(api).delete,
     ),
 
+    takeLatest(
+      FileTypes.UPLOAD_REQUEST,
+      File(api).upload,
+    ),
   ]);
 }
 

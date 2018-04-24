@@ -4,7 +4,7 @@
 
 export const types = {
   loginRequest: ['params'],
-  loginSuccess: ['data'],
+  loginSuccess: ['owner'],
   loginFailure: ['message'],
 
   studentRequest: ['params'],
@@ -18,6 +18,6 @@ export const types = {
   getUserRequest: [null],
   getUserSuccess: ['data'],
   getUserFailure: ['message'],
-}
+};
 
 // src/reducers/Authentication/Types.js

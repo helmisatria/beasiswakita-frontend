@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Input, Button } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import FormData from 'form-data';
 
 import { connect } from 'react-redux';
 
@@ -8,19 +8,108 @@ import '../../dist/css/partnerDaftar.css';
 import Header from '../Header/v3';
 
 import CheckboxIcon from '../../dist/assets/checkbox';
-
+import AuthenticationAction from '../../reducers/AuthenticationRedux';
+import FileAction from '../../reducers/FileRedux';
 
 class PartnerDaftar extends Component {
   state = {
-
+    email_address: '',
+    password: '',
+    password_confirm: '',
+    name: '',
+    position: '',
+    organization_name: '',
+    organization_email: '',
+    address: '',
+    city: '',
+    region: '',
+    country: '',
+    zipcode: '',
+    website: '',
+    logo: '',
+    file: null,
   }
+
+  alreadyRequest = false;
 
   componentDidMount() {
     document.body.style.backgroundColor = 'white';
     window.scrollTo(0, 0);
   }
 
+  componentWillReceiveProps({
+    authentication, file, history, uploadPic,
+  }) {
+    if (this.alreadyRequest && !authentication.fetching && !authentication.error) {
+      this.alreadyRequest = false;
+
+      const formData = new FormData();
+      formData.append('file', this.state.file);
+
+      this.props.uploadPic(formData);
+    }
+  }
+
+  registerOrg = () => {
+    const user_data = {
+      name: this.state.name,
+      position: this.state.position,
+      organization_name: this.state.organization_name,
+      organization_email: this.state.organization_email,
+      address: this.state.address,
+      city: this.state.city,
+      region: this.state.region,
+      country: this.state.country,
+      zipcode: this.state.zipcode,
+      website: this.state.website,
+      logo: this.state.logo,
+    };
+
+    const upload = {
+      email_address: this.state.organization_email,
+      password: this.state.password,
+      password_confirm: this.state.password,
+      role: this.state.role,
+      user_data,
+    };
+
+    this.props.registerOrg({
+      ...upload,
+      role: 'organization',
+    });
+
+    this.alreadyRequest = true;
+  }
+
+  handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value,
+    });
+  }
+
+
   render() {
+    const {
+      mail_address,
+      password,
+      password_confirm,
+      name,
+      position,
+      organization_name,
+      organization_email,
+      address,
+      city,
+      region,
+      country,
+      zipcode,
+      website,
+      logo,
+    } = this.state;
+
     const lists = [
       'Manajemen peserta beasiswa partner yang intuitif',
       'Track progress lebih mudah dan efisien',
@@ -52,18 +141,49 @@ class PartnerDaftar extends Component {
           </Grid.Column>
           <Grid.Column computer={6}>
             <p className="pDaftar inputLabel">Nama Lengkap</p>
-            <Input className="pDaftar input" fluid placeholder="contoh: Gema Abriantini" />
+            <Input
+              className="pDaftar input"
+              fluid
+              placeholder="contoh: Gema Abriantini"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleInputChange}
+            />
             <p className="pDaftar inputLabel">Yayasan/Perusahaan</p>
-            <Input className="pDaftar input" fluid placeholder="Business, Inc." />
+            <Input
+              className="pDaftar input"
+              fluid
+              placeholder="Business, Inc."
+              name="organization_name"
+              value={this.state.organization_name}
+              onChange={this.handleInputChange}
+            />
             <p className="pDaftar inputLabel">Logo Yayasan/Perusahaan</p>
-            <Input className="pDaftar input" type="file" fluid placeholder="Business, Inc." />
+            <Input
+              className="pDaftar input"
+              type="file"
+              fluid
+              name="logo"
+              onChange={event => this.setState({ file: event.target.files[0] })}
+            />
             <p className="pDaftar inputLabel">Email</p>
-            <Input className="pDaftar input" fluid placeholder="contoh: gema@mail.com" />
+            <Input
+              className="pDaftar input"
+              fluid
+              placeholder="contoh: gema@mail.com"
+              name="organization_email"
+              value={this.state.organization_email}
+              onChange={this.handleInputChange}
+            />
             <p className="pDaftar inputLabel">Password</p>
-            <Input className="pDaftar input" fluid />
-            <Link to="/partnership/board">
-              <Button fluid id="pDaftarSubmitBtn">Menjadi Partner</Button>
-            </Link>
+            <Input
+              className="pDaftar input"
+              fluid
+              name="password"
+              value={this.state.password}
+              onChange={this.handleInputChange}
+            />
+            <Button fluid id="pDaftarSubmitBtn" onClick={this.registerOrg}>Menjadi Partner</Button>
           </Grid.Column>
         </Grid>
       </div>
@@ -72,12 +192,24 @@ class PartnerDaftar extends Component {
 }
 
 const mapStateToProps = state => ({
-
+  authentication: {
+    fetching: state.Authentication.fetching,
+    error: state.Authentication.error,
+    message: state.Authentication.message,
+    data: state.Authentication.data,
+  },
+  file: {
+    fetching: state.File.fetching,
+    error: state.File.error,
+    message: state.File.message,
+    data: state.File.data,
+  },
 });
 
-const mapDispatchToProps = {
-
-};
+const mapDispatchToProps = dispatch => ({
+  registerOrg: params => dispatch(AuthenticationAction.organizationRequest(params)),
+  uploadPic: params => dispatch(FileAction.uploadRequest(params)),
+});
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(PartnerDaftar);

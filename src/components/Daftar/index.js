@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { Grid, Button, Input } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+
 
 import { NavLink } from 'react-router-dom';
 
 import Header from '../Header/v2';
 
 import FooterBottom from '../Footer/Bottom';
-
 import '../../dist/css/daftar.css';
 
-export default class Login extends Component {
+class Daftar extends Component {
   state = {
 
   }
@@ -55,3 +56,14 @@ export default class Login extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+
+});
+
+const mapDispatchToProps = dispatch => ({
+  // getList: () => dispatch(ScholarshipAction.getRequest()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Daftar);
+

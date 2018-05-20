@@ -32,11 +32,16 @@ class Login extends Component {
   }
 
   onLoginRequest = () => {
-    this.props.login({
-      email_address: this.state.email,
-      password: this.state.password,
-    });
-    this.isRequested = true;
+    // this.props.login({
+    //   email_address: this.state.email,
+    //   password: this.state.password,
+    // });
+    // this.isRequested = true;
+    this.props.history.push('/board');
+    //   email_address: this.state.email,
+    //   password: this.state.password,
+    // });
+    // this.isRequested = true;
   }
 
   isRequested = false;
@@ -73,13 +78,14 @@ class Login extends Component {
                   />
 
                   <p className="login subtitle forgot">Lupa password?</p>
-
-                  <Button
-                    fluid
-                    className="login btn"
-                    onClick={this.onLoginRequest}
-                  >Login
-                  </Button>
+                  <NavLink to="/board">
+                    <Button
+                      fluid
+                      className="login btn"
+                      onClick={this.onLoginRequest}
+                    >Login
+                    </Button>
+                  </NavLink>
 
                   <p className="login helpSignup">Belum punya akun?
                     <NavLink to="/daftar" className="daftar">
